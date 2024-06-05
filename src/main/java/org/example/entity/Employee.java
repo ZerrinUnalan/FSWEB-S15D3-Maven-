@@ -4,21 +4,21 @@ import java.util.Objects;
 
 public class Employee {
     private int id;
-    private String firstName;
+    private String firstname;
     private String lastname;
 
-    public Employee(int id, String firstName, String lastname) {
-        this.id=id;
-        this.firstName=firstName;
-        this.lastname=firstName;
+    public Employee(int id, String firstname, String lastName) {
+        this.id = id;
+        this.firstname = firstname;
+        this.lastname = lastName;
     }
 
     public int getId() {
         return id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getFirstname() {
+        return firstname;
     }
 
     public String getLastname() {
@@ -29,21 +29,21 @@ public class Employee {
     public String toString() {
         return "Employee{" +
                 "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastname='" + lastname + '\'' +
+                ", firstName='" + firstname + '\'' +
+                ", lastName='" + lastname + '\'' +
                 '}';
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Employee employee)) return false;
-        return id == employee.id && Objects.equals(firstName, employee.firstName) && Objects.equals(lastname, employee.lastname);
+        if (o == null || getClass() != o.getClass()) return false;
+        Employee employee = (Employee) o;
+        return id == employee.id && Objects.equals(firstname, employee.firstname) && Objects.equals(lastname, employee.lastname);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, firstName, lastname);
+        return Objects.hash(id, firstname, lastname);
     }
-}
 }

@@ -11,9 +11,9 @@ public class Main {
 
         List<Employee> employees=new LinkedList<>();
         employees.add(new Employee(1,"Zerrin","Ünalan"));
-        employees.add((new Employee(2,"Melissa","Ünalan"));,
-        employees.add((new Employee(3, "Berk", "Sert"));
-        employees.add((new Employee(4, "Zerrin", "Ünalan"));
+        employees.add(new Employee(2,"Melissa","Ünalan"));
+        employees.add(new Employee(3, "Berk", "Sert"));
+        employees.add(new Employee(4, "Zerrin", "Ünalan"));
         System.out.println(employees);
 
         System.out.println("Duplicates: " + findDuplicates(employees));
